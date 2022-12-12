@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    /* stix-two-text-regular - latin */
+    @font-face {
+      font-family: "STIX Two Text";
+      font-style: normal;
+      font-weight: 400;
+      src: local(""),
+        url("./assets/fonts/stix-two-text-v10-latin-regular.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/stix-two-text-v10-latin-regular.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-200 - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: normal;
+      font-weight: 200;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-200.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-200.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-200italic - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: italic;
+      font-weight: 200;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-200italic.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-200italic.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-300 - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: normal;
+      font-weight: 300;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-300.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-300.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-300italic - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: italic;
+      font-weight: 300;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-300italic.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-300italic.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-regular - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: normal;
+      font-weight: 400;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-regular.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-regular.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-italic - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: italic;
+      font-weight: 400;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-italic.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-italic.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-500 - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: normal;
+      font-weight: 500;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-500.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-500.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-500italic - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: italic;
+      font-weight: 500;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-500italic.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-500italic.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-600 - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: normal;
+      font-weight: 600;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-600.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-600.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-600italic - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: italic;
+      font-weight: 600;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-600italic.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-600italic.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-700 - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: normal;
+      font-weight: 700;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-700.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-700.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-700italic - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: italic;
+      font-weight: 700;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-700italic.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-700italic.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-800 - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: normal;
+      font-weight: 800;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-800.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-800.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* spectral-800italic - latin */
+    @font-face {
+      font-family: "Spectral";
+      font-style: italic;
+      font-weight: 800;
+      src: local(""),
+        url("./assets/fonts/spectral-v13-latin-800italic.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("./assets/fonts/spectral-v13-latin-800italic.woff") format("woff");
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  </style>
+  <style>
+    :root {
+      font-family: "Spectral";
+      font-size: 1rem;
+      line-height: 2;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    h3 {
+      font-size: 0.9rem;
+    }
+
+    h4 {
+      font-size: 0.8rem;
+    }
+
+    h5 {
+      font-size: 0.7rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 600;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-decoration: underline;
+    }
+
+    b {
+      font-weight: 600;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 0.5rem;
+      border: 1px solid black;
+    }
+  </style>
+  <style>
+    .title {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 1.7rem;
+    }
+
+    .where {
+      text-decoration: none;
+      margin-bottom: 0;
+    }
+
+    .where__list {
+      list-style-type: none;
+      padding-left: 0.8rem;
+    }
+
+    .pageBreak {
+      page-break-after: always;
+    }
+  </style>
+  <h1 class="title">
+    Investigating the effect that the mass of salt in water has on its
+    specific heat capacity.
+  </h1>
+  <h2>Research question</h2>
+  <!--Personal engagement. Is this enough??-->
+  <p>
+    After an experiment in class, I found I was keen to explore the concept of
+    specific heat capacity further. I thought that the link between the mass
+    of salt and specific heat capacity would be interesting to investigate.
+    Hence, my research question is:
+  </p>
+  <p>
+    <em><b>How does the mass of salt in water affect the specific heat capacity
+        of the solution?</b></em>
+  </p>
+  <h2>Theory</h2>
+  <p>
+    The specific heat capacity is a constant value existing for each unique
+    material. It is defined by the amount of energy it takes to heat 1
+    kilogram of that material by 1 kelvin. To calculate the specific heat
+    capacity, one must measure the amount of thermal energy transferred into
+    or out of a material of known mass. Often, this value is used to calculate
+    the amount of energy required to heat a material:
+  </p>
+  <h3>Equation 1</h3>
+  <math>
+    <mrow>
+      <mi>Q</mi>
+      <mo>=</mo>
+      <mi>m</mi>
+      <mi>c</mi>
+      <mrow>
+        <mi mathvariant="normal">Δ</mi>
+      </mrow>
+      <mi>T</mi>
+    </mrow>
+  </math>
+  <h4 class="where">Where:</h4>
+  <ul class="where__list">
+    <li>
+      <math>
+        <mrow>
+          <mi>Q</mi>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Energy in
+      <math>
+        <mi>J</mi>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mi>m</mi>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Mass of substance in
+      <math>
+        <mrow>
+          <mi>k</mi>
+          <mi>g</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mi>c</mi>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Specific heat capacity in
+      <math>
+        <mrow>
+          <mi>J</mi>
+          <mo>⋅</mo>
+          <mi>k</mi>
+          <msup>
+            <mi>g</mi>
+            <mrow>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+          <mo>⋅</mo>
+          <msup>
+            <mi>K</mi>
+            <mrow>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mi mathvariant="normal">Δ</mi>
+          </mrow>
+          <mi>T</mi>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Change in temperature in
+      <math>
+        <mi>K</mi>
+      </math>
+      or
+      <math>
+        <mrow>
+          <mi>°</mi>
+          <mi>C</mi>
+        </mrow>
+      </math>
+    </li>
+  </ul>
+  We can rewrite this equation for specific heat capacity:
+  <h3>Equation 2</h3>
+  <p>
+    <math>
+      <mrow>
+        <mi>c</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mi>Q</mi>
+          <mrow>
+            <mi>m</mi>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <mi>T</mi>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+  </p>
+  <p>
+    In this experiment, the magnitude of energy transfer is measured as the
+    material cools when combined with another material of known heat capacity.
+    We find the magnitude of this energy transfer by substituting the
+    temperature drop of the known material into equation 1, then substituting
+    that into equation 2. This produces the following:
+  </p>
+  <h3>Equation 3</h3>
+  <p>
+    <math>
+      <mrow>
+        <msub>
+          <mi>c</mi>
+          <mi>s</mi>
+        </msub>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>m</mi>
+              <mi>w</mi>
+            </msub>
+            <msub>
+              <mi>c</mi>
+              <mi>w</mi>
+            </msub>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <msub>
+              <mi>T</mi>
+              <mi>w</mi>
+            </msub>
+          </mrow>
+          <mrow>
+            <msub>
+              <mi>m</mi>
+              <mi>s</mi>
+            </msub>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <msub>
+              <mi>T</mi>
+              <mi>s</mi>
+            </msub>
+          </mrow>
+        </mfrac>
+      </mrow>
+    </math>
+  </p>
+  <h4 class="where">Where:</h4>
+  <ul class="where__list">
+    <li>
+      <math>
+        <mrow>
+          <msub>
+            <mi>c</mi>
+            <mi>s</mi>
+          </msub>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Specific heat capacity of solution in
+      <math>
+        <mrow>
+          <mi>J</mi>
+          <mo>⋅</mo>
+          <mi>k</mi>
+          <msup>
+            <mi>g</mi>
+            <mrow>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+          <mo>⋅</mo>
+          <msup>
+            <mi>K</mi>
+            <mrow>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <msub>
+            <mi>m</mi>
+            <mi>w</mi>
+          </msub>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Mass of material of known specific heat capacity in
+      <math>
+        <mrow>
+          <mi>k</mi>
+          <mi>g</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <msub>
+            <mi>c</mi>
+            <mi>w</mi>
+          </msub>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Specific heat capacity of known material in
+      <math>
+        <mrow>
+          <mi>J</mi>
+          <mo>⋅</mo>
+          <mi>k</mi>
+          <msup>
+            <mi>g</mi>
+            <mrow>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+          <mo>⋅</mo>
+          <msup>
+            <mi>K</mi>
+            <mrow>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+          </msup>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mi mathvariant="normal">Δ</mi>
+          </mrow>
+          <msub>
+            <mi>T</mi>
+            <mi>w</mi>
+          </msub>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Temperature change of known material in
+      <math>
+        <mi>K</mi>
+      </math>
+      or
+      <math>
+        <mrow>
+          <mi>°</mi>
+          <mi>C</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <msub>
+            <mi>m</mi>
+            <mi>s</mi>
+          </msub>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Mass of salt solution in
+      <math>
+        <mrow>
+          <mi>k</mi>
+          <mi>g</mi>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mi mathvariant="normal">Δ</mi>
+          </mrow>
+          <msub>
+            <mi>T</mi>
+            <mi>s</mi>
+          </msub>
+          <mo>=</mo>
+        </mrow>
+      </math>
+      Temperature change of solution in
+      <math>
+        <mi>K</mi>
+      </math>
+      or
+      <math>
+        <mrow>
+          <mi>°</mi>
+          <mi>C</mi>
+        </mrow>
+      </math>
+    </li>
+  </ul>
+  <h2>Hypothesis</h2>
+  <p>
+    Equation 3 relates the specific heat capacity to the mass of the solution.
+    The equation states an inverse proportionality between the specific heat
+    capacity of the solution and the mass of salt in the solution. Given this
+    relationship, it is expected that as the mass of salt increases, the
+    specific heat capacity decreases at a decreasing rate. The graph of mass
+    of salt against the inverse of the specific heat capacity will have a
+    positive, linear correlation. Since a mass of 0 salt in the water would be
+    distilled water, the graph is expected to have a y-intercept of
+    <math>
+      <mrow>
+        <mn>4186</mn>
+        <mspace width="0.5em"></mspace>
+        <mi>J</mi>
+        <mo>⋅</mo>
+        <mi>k</mi>
+        <msup>
+          <mi>g</mi>
+          <mrow>
+            <mo>−</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo>⋅</mo>
+        <msup>
+          <mi>K</mi>
+          <mrow>
+            <mo>−</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </math>
+    (Engineering Toolbox n.d.)
+  </p>
+  <h2>Diagram</h2>
+  <svg xmlns="http://www.w3.org/2000/svg" id="screenshot-be047152-7dc7-807a-8001-bc29aba118e8" width="537.5"
+    height="211.51" fill="none" style="-webkit-print-color-adjust:exact" version="1.1">
+    <g id="shape-be047152-7dc7-807a-8001-bc29aba118e8">
+      <g id="shape-be047152-7dc7-807a-8001-bc2655ba1ade">
+        <path id="fills-be047152-7dc7-807a-8001-bc2655ba1ade"
+          d="M430 137h100v74H430v-74Zm-7 74h114m-107-74h100v74H430v-74Zm5 5h90v64h-90v-64Z" />
+        <path id="strokes-be047152-7dc7-807a-8001-bc2655ba1ade"
+          d="M430 137h100v74H430v-74Zm-7 74h114m-107-74h100v74H430v-74Zm5 5h90v64h-90v-64Z" class="stroke-shape"
+          style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc270500efbc">
+        <g id="shape-be047152-7dc7-807a-8001-bc1fa5732ef5">
+          <rect id="fills-be047152-7dc7-807a-8001-bc1fa5732ef5" width="101" height="74" x="35" y="137" rx="0" ry="0" />
+          <rect id="strokes-be047152-7dc7-807a-8001-bc1fa5732ef5" width="101" height="74" x="35" y="137"
+            class="stroke-shape" rx="0" ry="0" style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+        </g>
+        <g id="shape-be047152-7dc7-807a-8001-bc26e7974fb9">
+          <defs>
+            <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5c1a3b2" width="46" height="13" x="62.5" y="167.5"
+              data-loading="false" patternUnits="userSpaceOnUse">
+              <path d="M0 0h46v13H0z" style="fill:#505050;fill-opacity:1" />
+            </pattern>
+          </defs>
+          <g class="text-container">
+            <text id="fills-be047152-7dc7-807a-8001-bc26e7974fb9" x="62.5" y="165.5"
+              dominant-baseline="text-before-edge" lengthAdjust="spacingAndGlyphs"
+              style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+              textLength="45.563">Hot plate</text>
+          </g>
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc25c506d321">
+        <g id="shape-be047152-7dc7-807a-8001-bc2551b17600">
+          <path id="fills-be047152-7dc7-807a-8001-bc2551b17600"
+            d="M276 127.433v-4.507c0-7.6 4.972-11.519 11.437-3.506 6.464 8.013 10.939 18.029 16.409 9.516 5.47-8.514 16.906-11.519 16.906 5.008 0 14.461 0 33.523 9.328 38.062 1.332.649 2.855 1.001 4.595 1.001 8.306 0 24.366-21.034 24.366 3.005 0 24.039 13.509 14.733 21.801 19.226 11.587 10.762 42.195 15.737 42.195 15.737" />
+          <path id="strokes-be047152-7dc7-807a-8001-bc2551b17600"
+            d="M276 127.433v-4.507c0-7.6 4.972-11.519 11.437-3.506 6.464 8.013 10.939 18.029 16.409 9.516 5.47-8.514 16.906-11.519 16.906 5.008 0 14.461 0 33.523 9.328 38.062 1.332.649 2.855 1.001 4.595 1.001 8.306 0 24.366-21.034 24.366 3.005 0 24.039 13.509 14.733 21.801 19.226 11.587 10.762 42.195 15.737 42.195 15.737"
+            class="stroke-shape" style="fill:none;stroke-width:.5;stroke:#000;stroke-opacity:1" />
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc20e8399d4d">
+        <path id="fills-be047152-7dc7-807a-8001-bc20e8399d4d"
+          d="M108.954 68v58.997c0 5.521-4.469 10.003-9.974 10.003H71.927c-5.505 0-9.973-4.482-9.973-10.003V72.139S61.955 68 57 68m4.954 31.865 47-.141" />
+        <path id="strokes-be047152-7dc7-807a-8001-bc20e8399d4d"
+          d="M108.954 68v58.997c0 5.521-4.469 10.003-9.974 10.003H71.927c-5.505 0-9.973-4.482-9.973-10.003V72.139S61.955 68 57 68m4.954 31.865 47-.141"
+          class="stroke-shape" style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc24f125930b">
+        <path id="fills-be047152-7dc7-807a-8001-bc24f125930b" d="M276 127v70m0-70" />
+        <path id="strokes-be047152-7dc7-807a-8001-bc24f125930b" d="M276 127v70m0-70" class="stroke-shape"
+          style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc21b1705d52">
+        <path id="fills-be047152-7dc7-807a-8001-bc21b1705d52" d="m62 53 9 74" />
+        <path id="strokes-be047152-7dc7-807a-8001-bc21b1705d52" d="m62 53 9 74" class="stroke-shape"
+          style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc24df366b8d">
+        <path id="fills-be047152-7dc7-807a-8001-bc24df366b8d"
+          d="M255 211h43v-49h-43v49Zm-4-49h51v-7h-51v7Zm9 44h33v-44h-33v44Zm0-20.383h33" />
+        <path id="strokes-be047152-7dc7-807a-8001-bc24df366b8d"
+          d="M255 211h43v-49h-43v49Zm-4-49h51v-7h-51v7Zm9 44h33v-44h-33v44Zm0-20.383h33" class="stroke-shape"
+          style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc21fffa61fc">
+        <path id="fills-be047152-7dc7-807a-8001-bc21fffa61fc"
+          d="M95.03 60c-2.038 0-2.038 1.149-2.038 2.038v59c0 3.312-2.689 6-6 6-3.312 0-6-2.688-6-6v-59c0-.666 0-2.038-1.992-2.038m1.992 30.988 12-.03" />
+        <path id="strokes-be047152-7dc7-807a-8001-bc21fffa61fc"
+          d="M95.03 60c-2.038 0-2.038 1.149-2.038 2.038v59c0 3.312-2.689 6-6 6-3.312 0-6-2.688-6-6v-59c0-.666 0-2.038-1.992-2.038m1.992 30.988 12-.03"
+          class="stroke-shape" style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc23dbf0a3e5">
+        <path id="fills-be047152-7dc7-807a-8001-bc23dbf0a3e5" d="m87 43-3 80" />
+        <path id="strokes-be047152-7dc7-807a-8001-bc23dbf0a3e5" d="m87 43-3 80" class="stroke-shape"
+          style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc22e4e5ff50">
+        <path id="fills-be047152-7dc7-807a-8001-bc22e4e5ff50"
+          d="M150 211h81m-63.78 0V1m25.524 64H92.719m79.388-4.088V69.2h-9.653v-8.288h9.653Z"
+          style="fill:#000;fill-opacity:1" />
+        <path id="strokes-be047152-7dc7-807a-8001-bc22e4e5ff50"
+          d="M150 211h81m-63.78 0V1m25.524 64H92.719m79.388-4.088V69.2h-9.653v-8.288h9.653Z" class="stroke-shape"
+          style="fill:none;stroke-width:1;stroke:#000;stroke-opacity:1" />
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc270fb994f6">
+        <defs>
+          <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5c8aa1d" width="34" height="13" x="22" y="106"
+            data-loading="false" patternUnits="userSpaceOnUse">
+            <path d="M0 0h34v13H0z" style="fill:#505050;fill-opacity:1" />
+          </pattern>
+        </defs>
+        <g class="text-container">
+          <text id="fills-be047152-7dc7-807a-8001-bc270fb994f6" x="22" y="104" dominant-baseline="text-before-edge"
+            lengthAdjust="spacingAndGlyphs"
+            style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+            textLength="33.664">Beaker</text>
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc271fa1540b">
+        <path id="fills-be047152-7dc7-807a-8001-bc271fa1540b" d="M83 39 37 14l21 34" />
+        <g id="strokes-be047152-7dc7-807a-8001-bc271fa1540b" class="stroke-shape">
+          <defs>
+            <marker id="marker-60c0a3f7-f77f-805c-8001-bc29b5c950f3-line-arrow" fill="#505050" fill-opacity="1"
+              markerHeight="8.5" markerWidth="8.5" orient="auto-start-reverse" refX="2" refY="3" viewBox="0 0 3 6">
+              <path d="M.5.5 3 3 .5 5.5 0 5l2-2-2-2z" />
+            </marker>
+          </defs>
+          <path d="M83 39 37 14l21 34"
+            style="fill:none;stroke-width:1;stroke:#505050;stroke-opacity:1;marker-start:url(#marker-60c0a3f7-f77f-805c-8001-bc29b5c950f3-line-arrow);marker-end:url(#marker-60c0a3f7-f77f-805c-8001-bc29b5c950f3-line-arrow)" />
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc27727dee54">
+        <defs>
+          <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5ca33fe" width="67" height="13" x="0" y="0"
+            data-loading="false" patternUnits="userSpaceOnUse">
+            <path d="M0 0h67v13H0z" style="fill:#505050;fill-opacity:1" />
+          </pattern>
+        </defs>
+        <g class="text-container">
+          <text id="fills-be047152-7dc7-807a-8001-bc27727dee54" y="-2" dominant-baseline="text-before-edge"
+            lengthAdjust="spacingAndGlyphs"
+            style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+            textLength="67.281">Thermometer</text>
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc279ab6282c">
+        <path id="fills-be047152-7dc7-807a-8001-bc279ab6282c" d="m105 25-9 28" />
+        <g id="strokes-be047152-7dc7-807a-8001-bc279ab6282c" class="stroke-shape">
+          <defs>
+            <marker id="marker-60c0a3f7-f77f-805c-8001-bc29b5caa534-line-arrow" fill="#505050" fill-opacity="1"
+              markerHeight="8.5" markerWidth="8.5" orient="auto-start-reverse" refX="2" refY="3" viewBox="0 0 3 6">
+              <path d="M.5.5 3 3 .5 5.5 0 5l2-2-2-2z" />
+            </marker>
+          </defs>
+          <path d="m105 25-9 28"
+            style="fill:none;stroke-width:1;stroke:#505050;stroke-opacity:1;marker-end:url(#marker-60c0a3f7-f77f-805c-8001-bc29b5caa534-line-arrow)" />
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc27affd5ca7">
+        <defs>
+          <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5cb321e" width="45" height="13" x="93" y="10"
+            data-loading="false" patternUnits="userSpaceOnUse">
+            <path d="M0 0h45v13H0z" style="fill:#505050;fill-opacity:1" />
+          </pattern>
+        </defs>
+        <g class="text-container">
+          <text id="fills-be047152-7dc7-807a-8001-bc27affd5ca7" x="93" y="8" dominant-baseline="text-before-edge"
+            lengthAdjust="spacingAndGlyphs"
+            style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+            textLength="45.078">Test tube</text>
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc27ee30183a">
+        <defs>
+          <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5cb9dee" width="60" height="13" x="174" y="114"
+            data-loading="false" patternUnits="userSpaceOnUse">
+            <path d="M0 0h60v13H0z" style="fill:#505050;fill-opacity:1" />
+          </pattern>
+        </defs>
+        <g class="text-container">
+          <text id="fills-be047152-7dc7-807a-8001-bc27ee30183a" x="174" y="112" dominant-baseline="text-before-edge"
+            lengthAdjust="spacingAndGlyphs"
+            style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+            textLength="59.906">Retort stand</text>
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc27fed1e80f">
+        <path id="fills-be047152-7dc7-807a-8001-bc27fed1e80f" d="M146.27 107.728 135 69" />
+        <g id="strokes-be047152-7dc7-807a-8001-bc27fed1e80f" class="stroke-shape">
+          <defs>
+            <marker id="marker-60c0a3f7-f77f-805c-8001-bc29b5cc0c69-line-arrow" fill="#505050" fill-opacity="1"
+              markerHeight="8.5" markerWidth="8.5" orient="auto-start-reverse" refX="2" refY="3" viewBox="0 0 3 6">
+              <path d="M.5.5 3 3 .5 5.5 0 5l2-2-2-2z" />
+            </marker>
+          </defs>
+          <path d="M146.27 107.728 135 69"
+            style="fill:none;stroke-width:1;stroke:#505050;stroke-opacity:1;marker-end:url(#marker-60c0a3f7-f77f-805c-8001-bc29b5cc0c69-line-arrow)" />
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc2822ff9f48">
+        <defs>
+          <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5cc8703" width="32" height="13" x="128" y="107"
+            data-loading="false" patternUnits="userSpaceOnUse">
+            <path d="M0 0h32v13H0z" style="fill:#505050;fill-opacity:1" />
+          </pattern>
+        </defs>
+        <g class="text-container">
+          <text id="fills-be047152-7dc7-807a-8001-bc2822ff9f48" x="128" y="105" dominant-baseline="text-before-edge"
+            lengthAdjust="spacingAndGlyphs"
+            style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+            textLength="32.297">Clamp</text>
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc286837a9e8">
+        <defs>
+          <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5cd2340" width="59" height="13" x="302" y="192"
+            data-loading="false" patternUnits="userSpaceOnUse">
+            <path d="M0 0h59v13H0z" style="fill:#505050;fill-opacity:1" />
+          </pattern>
+        </defs>
+        <g class="text-container">
+          <text id="fills-be047152-7dc7-807a-8001-bc286837a9e8" x="302" y="190" dominant-baseline="text-before-edge"
+            lengthAdjust="spacingAndGlyphs"
+            style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+            textLength="58.664">Calorimeter</text>
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc287a12483e">
+        <defs>
+          <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5cdb71b" width="49" height="13" x="455.5" y="167.505"
+            data-loading="false" patternUnits="userSpaceOnUse">
+            <path d="M0 0h49v13H0z" style="fill:#505050;fill-opacity:1" />
+          </pattern>
+        </defs>
+        <g class="text-container">
+          <text id="fills-be047152-7dc7-807a-8001-bc287a12483e" x="455.5" y="165.505"
+            dominant-baseline="text-before-edge" lengthAdjust="spacingAndGlyphs"
+            style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+            textLength="49.383">Computer</text>
+        </g>
+      </g>
+      <g id="shape-be047152-7dc7-807a-8001-bc288d9519da">
+        <defs>
+          <pattern id="fill-0-60c0a3f7-f77f-805c-8001-bc29b5ce41b2" width="100" height="13" x="289" y="101"
+            data-loading="false" patternUnits="userSpaceOnUse">
+            <path d="M0 0h100v13H0z" style="fill:#505050;fill-opacity:1" />
+          </pattern>
+        </defs>
+        <g class="text-container">
+          <text id="fills-be047152-7dc7-807a-8001-bc288d9519da" x="289" y="99" dominant-baseline="text-before-edge"
+            lengthAdjust="spacingAndGlyphs"
+            style="text-transform:none;font-family:Spectral;letter-spacing:normal;font-style:normal;font-weight:400;white-space:pre;font-size:11px;text-decoration:none solid #505050;direction:ltr;fill:#505050;fill-opacity:1"
+            textLength="100.375">Digital thermometer</text>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <h2>Apparatus</h2>
+  <ul>
+    <li>1x hot plate</li>
+    <li>1x 1000ml beaker</li>
+    <li>1x test tube</li>
+    <li>1x retort stand</li>
+    <li>1x clamp</li>
+    <li>2x analogue thermometer</li>
+    <li>1x digital thermometer</li>
+    <li>1x calorimeter</li>
+    <li>1x computer with relevant software for thermometer</li>
+    <li>0.05kg sodium chloride (table salt)</li>
+  </ul>
+  <h2>Method</h2>
+  <p>
+    Initially, I wanted to pursue an experiment that investigated specific
+    heat capacity by heating solutions rather than cooling them down. In order
+    to achieve this, I decided to place a heating element in the water along
+    with a thermometer. This solution appeared sound to me until I added salt
+    and realized I accidentally made bleach by running a current through the
+    sodium chloride solution. I considered indirectly heating the water,
+    however, I eventually decided it is too hard to heat and insulate water
+    using the equipment in our school lab.
+  </p>
+  <p>
+    I abandoned that method and decided on this alternative method that uses
+    cooling to determine the specific heat capacity rather than heating.
+  </p>
+  <ol>
+    <li>Note the mass of calorimeter.</li>
+    <li>
+      Fill the beaker with water so that when the test tube is filled with
+      25ml of solution and submerged in the water, the water level is above
+      that of the solution.
+    </li>
+    <li>Place the beaker on the hot plate and heat to above 90°C.</li>
+    <li>Fill calorimeter with 150ml of distilled water.</li>
+    <li>
+      Submerge the digital thermometer in the calorimeter and note the
+      temperature.
+    </li>
+    <li>Dissolve 0.0005kg of salt in 25ml of water.</li>
+    <li>
+      Transfer solution into test tube and submerge test tube in water. Heat
+      to 90°C exactly.
+    </li>
+    <li>
+      Once heated, transfer solution to calorimeter quickly and start the
+      digital thermometer.
+    </li>
+    <li>
+      Watch the thermometer carefully and record its maximum temperature.
+    </li>
+    <li>
+      Record the combined final weight of solution and water. Discard the
+      combined solution.
+    </li>
+    <li>
+      Repeat steps 4, 6, 7, 8, 9 for different amounts of salt, including a
+      control trial with 0kg of salt.
+    </li>
+  </ol>
+  <style>
+    .safety {
+      border: 1px solid red;
+      padding: 0.5rem;
+    }
+
+    .safety span {
+      color: red;
+    }
+
+    .safety ul {
+      margin: 0.5rem 0;
+    }
+  </style>
+  <div class="safety">
+    <span>SAFETY PRECAUTIONS:</span>
+    <ul>
+      <li>
+        The test tube is extremely hot after it is heated to 90°C. Use gloves
+        and take care with the liquid.
+      </li>
+      <li>
+        The hot plate is extremely hot. Stay aware of it and keep hands clear.
+      </li>
+    </ul>
+  </div>
+  <h2>Variables</h2>
+  <h3>Independent variable</h3>
+  <p>
+    The independent variable is the mass of salt in the solution, measured in
+    <math>
+      <mrow>
+        <mi>k</mi>
+        <mi>g</mi>
+      </mrow>
+    </math>
+    .
+  </p>
+  <h3>Dependent variable</h3>
+  <p>
+    The dependent variable is the specific heat capacity, measured in
+    <math>
+      <mrow>
+        <mi>J</mi>
+        <mo>⋅</mo>
+        <mi>k</mi>
+        <msup>
+          <mi>g</mi>
+          <mrow>
+            <mo>−</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo>⋅</mo>
+        <msup>
+          <mi>K</mi>
+          <mrow>
+            <mo>−</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mrow>
+    </math>
+    . The dependent variable will be calculated using measured values of
+    temperature change in equation 3.
+  </p>
+  <h3>Controlled variables</h3>
+  <table>
+    <tr>
+      <th>Variable</th>
+      <th>Action taken</th>
+    </tr>
+    <tr>
+      <td>Amount of water in calorimeter</td>
+      <td>
+        Fill the water directly within the calorimeter and measure using a
+        precise scale.
+      </td>
+    </tr>
+    <tr>
+      <td>Amount of water in solution</td>
+      <td>Measure using a precise scale.</td>
+    </tr>
+    <tr>
+      <td>Temperature of heated solution</td>
+      <td>
+        Watch the analogue thermometer carefully and stir the solution often.
+        Refill the large beaker with water when evaporation causes water level
+        to drop.
+      </td>
+    </tr>
+    <tr>
+      <td>Thermal energy lost due to non-perfect calorimeter</td>
+      <td>
+        Use same type of calorimeter when conducting multiple trials
+        concurrently.
+      </td>
+    </tr>
+    <tr>
+      <td>Salt content in water prior to adding salt</td>
+      <td>Use the same batch of distilled water for each trial.</td>
+    </tr>
+  </table>
+  <h2>Results</h2>
+  <h3>Table</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <math>
+            <mrow>
+              <msub>
+                <mi>m</mi>
+                <mrow>
+                  <mi>salt</mi>
+                </mrow>
+              </msub>
+              <mo>±</mo>
+              <mn>0.000001</mn>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>k</mi>
+              <mi>g</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>
+        </th>
+        <th>
+          <math>
+            <mrow>
+              <msub>
+                <mi>T</mi>
+                <mrow>
+                  <mi>avg</mi>
+                </mrow>
+              </msub>
+              <mo>±</mo>
+              <mn>0.25</mn>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>K</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>
+        </th>
+        <th>
+          <math>
+            <mrow>
+              <msub>
+                <mi>m</mi>
+                <mrow>
+                  <mi>avg final solution</mi>
+                </mrow>
+              </msub>
+              <mo>±</mo>
+              <mn>0.00001</mn>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>k</mi>
+              <mi>g</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>
+        </th>
+        <th>
+          <math>
+            <mrow>
+              <msub>
+                <mi>c</mi>
+                <mrow>
+                  <mi>avg</mi>
+                </mrow>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>J</mi>
+              <mo>⋅</mo>
+              <mi>k</mi>
+              <msup>
+                <mi>g</mi>
+                <mrow>
+                  <mo>−</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+              <mo>⋅</mo>
+              <msup>
+                <mi>K</mi>
+                <mrow>
+                  <mo>−</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>
+        </th>
+        <th>
+          <math>
+            <mrow>
+              <mo>±</mo>
+              <msub>
+                <mi>c</mi>
+                <mrow>
+                  <mi>avg</mi>
+                </mrow>
+              </msub>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mi>J</mi>
+              <mo>⋅</mo>
+              <mi>k</mi>
+              <msup>
+                <mi>g</mi>
+                <mrow>
+                  <mo>−</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+              <mo>⋅</mo>
+              <msup>
+                <mi>K</mi>
+                <mrow>
+                  <mo>−</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0</td>
+        <td>302.9</td>
+        <td>0.17394</td>
+        <td>4274</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>0.0005</td>
+        <td>301.7</td>
+        <td>0.17360</td>
+        <td>4196</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>0.001</td>
+        <td>301.9</td>
+        <td>0.17483</td>
+        <td>4084</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>0.0015</td>
+        <td>302.2</td>
+        <td>0.17584</td>
+        <td>4047</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>0.002</td>
+        <td>303.3</td>
+        <td>0.17600</td>
+        <td>3874</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>0.0025</td>
+        <td>303.5</td>
+        <td>0.17665</td>
+        <td>3839</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>0.003</td>
+        <td>303.1</td>
+        <td>0.17738</td>
+        <td>3558</td>
+        <td>100</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Example calculation of specific heat capacity:</h3>
+  <h4 class="where">Given:</h4>
+  <ul class="where__list">
+    <li>
+      <math>
+        <mrow>
+          <msub>
+            <mi>m</mi>
+            <mi>w</mi>
+          </msub>
+          <mo>=</mo>
+          <mn>0.15 kg</mn>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <msub>
+            <mi>c</mi>
+            <mi>w</mi>
+          </msub>
+          <mo>=</mo>
+          <mn>4186</mn>
+          <mrow>
+            <mi>J</mi>
+            <mo>⋅</mo>
+            <mi>k</mi>
+            <msup>
+              <mi>g</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+            <mo>⋅</mo>
+            <msup>
+              <mi>K</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </mrow>
+      </math>
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mi mathvariant="normal">Δ</mi>
+          </mrow>
+          <msub>
+            <mi>T</mi>
+            <mi>w</mi>
+          </msub>
+          <mo>=</mo>
+          <mn>28.6-18.9</mn>
+          <mi>K</mi>
+        </mrow>
+      </math>
+      (room temperature subtracted from measured temperature)
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <msub>
+            <mi>m</mi>
+            <mi>s</mi>
+          </msub>
+          <mo>=</mo>
+          <mn>0.025 + 0.0005</mn>
+          <mi>kg</mi>
+        </mrow>
+      </math>
+      (water mass added to salt mass)
+    </li>
+    <li>
+      <math>
+        <mrow>
+          <mrow>
+            <mi mathvariant="normal">Δ</mi>
+          </mrow>
+          <msub>
+            <mi>T</mi>
+            <mi>s</mi>
+          </msub>
+          <mo>=</mo>
+          <mn>90-28.6</mn>
+          <mi>K</mi>
+        </mrow>
+      </math>
+      (measured temperature subtracted from heated temperature)
+    </li>
+  </ul>
+  <math>
+    <mrow>
+      <msub>
+        <mi>c</mi>
+        <mi>s</mi>
+      </msub>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <msub>
+            <mi>m</mi>
+            <mi>w</mi>
+          </msub>
+          <msub>
+            <mi>c</mi>
+            <mi>w</mi>
+          </msub>
+          <mrow>
+            <mi mathvariant="normal">Δ</mi>
+          </mrow>
+          <msub>
+            <mi>T</mi>
+            <mi>w</mi>
+          </msub>
+        </mrow>
+        <mrow>
+          <msub>
+            <mi>m</mi>
+            <mi>s</mi>
+          </msub>
+          <mrow>
+            <mi mathvariant="normal">Δ</mi>
+          </mrow>
+          <msub>
+            <mi>T</mi>
+            <mi>s</mi>
+          </msub>
+        </mrow>
+      </mfrac>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <mfrac>
+        <mrow>
+          <mn>0.15</mn>
+          <mo>⋅</mo>
+          <mn>4186</mn>
+          <mo>⋅</mo>
+          <mn>9.7</mn>
+        </mrow>
+        <mrow>
+          <mn>0.02309</mn>
+          <mo>⋅</mo>
+          <mn>61.4</mn>
+        </mrow>
+      </mfrac>
+    </mrow>
+    <mrow>
+      <mo>=</mo>
+      <mn>4296</mn>
+    </mrow>
+  </math>
+  <h3>Uncertainties</h3>
+  <table>
+    <tr>
+      <th>Variable</th>
+      <th>Explanation</th>
+    </tr>
+    <tr>
+      <td>
+        <math>
+          <mrow>
+            <msub>
+              <mi>m</mi>
+              <mrow>
+                <mi>salt</mi>
+              </mrow>
+            </msub>
+            <mo>±</mo>
+            <mn>0.000001</mn>
+            <mo form="prefix" stretchy="false">(</mo>
+            <mi>k</mi>
+            <mi>g</mi>
+            <mo form="postfix" stretchy="false">)</mo>
+          </mrow>
+        </math>
+      </td>
+      <td>Digital scale resolution.</td>
+    </tr>
+    <tr>
+      <td>
+        <math>
+          <mrow>
+            <msub>
+              <mi>T</mi>
+              <mrow>
+                <mi>avg</mi>
+              </mrow>
+            </msub>
+            <mo>±</mo>
+            <mn>0.25</mn>
+            <mo form="prefix" stretchy="false">(</mo>
+            <mi>K</mi>
+            <mo form="postfix" stretchy="false">)</mo>
+          </mrow>
+        </math>
+      </td>
+      <td>Limitation of the digital thermometer software.</td>
+    </tr>
+    <tr>
+      <td>
+        <math>
+          <mrow>
+            <msub>
+              <mi>m</mi>
+              <mrow>
+                <mi>avg final solution</mi>
+              </mrow>
+            </msub>
+            <mo>±</mo>
+            <mn>0.00001</mn>
+            <mo form="prefix" stretchy="false">(</mo>
+            <mi>k</mi>
+            <mi>g</mi>
+            <mo form="postfix" stretchy="false">)</mo>
+          </mrow>
+        </math>
+      </td>
+      <td>Digital scale resolution.</td>
+    </tr>
+    <tr>
+      <td>
+        <math>
+          <mrow>
+            <msub>
+              <mi>m</mi>
+              <mi>w</mi>
+            </msub>
+            <mo>±</mo>
+            <mn>0.0001</mn>
+            <mo form="prefix" stretchy="false">(</mo>
+            <mi>k</mi>
+            <mi>g</mi>
+            <mo form="postfix" stretchy="false">)</mo>
+          </mrow>
+        </math>
+      </td>
+      <td>
+        Digital scale resolution.
+      </td>
+    </tr>
+  </table>
+  <h3>Propagation of uncertainty in specific heat capacity</h4>
+    <p>
+      Using equation 3:
+      <math>
+        <mrow>
+          <msub>
+            <mi>c</mi>
+            <mi>s</mi>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <msub>
+                <mi>m</mi>
+                <mi>w</mi>
+              </msub>
+              <msub>
+                <mi>c</mi>
+                <mi>w</mi>
+              </msub>
+              <mrow>
+                <mi mathvariant="normal">Δ</mi>
+              </mrow>
+              <msub>
+                <mi>T</mi>
+                <mi>w</mi>
+              </msub>
+            </mrow>
+            <mrow>
+              <msub>
+                <mi>m</mi>
+                <mi>s</mi>
+              </msub>
+              <mrow>
+                <mi mathvariant="normal">Δ</mi>
+              </mrow>
+              <msub>
+                <mi>T</mi>
+                <mi>s</mi>
+              </msub>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      , as:
+      <math>
+        <mrow>
+          <mi>a</mi>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mi>b</mi>
+              <mi>c</mi>
+              <mi>d</mi>
+            </mrow>
+            <mrow>
+              <mi>e</mi>
+              <mi>f</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </math>
+    </p>
+    <p>Uncertainty in specific heat capacity is then:</p>
+    <math>
+      <mrow>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <mi>a</mi>
+          </mrow>
+          <mi>a</mi>
+        </mfrac>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <mi>b</mi>
+          </mrow>
+          <mi>b</mi>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <mi>c</mi>
+          </mrow>
+          <mi>c</mi>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <mi>d</mi>
+          </mrow>
+          <mi>d</mi>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <mi>e</mi>
+          </mrow>
+          <mi>e</mi>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mrow>
+            <mrow>
+              <mi mathvariant="normal">Δ</mi>
+            </mrow>
+            <mi>f</mi>
+          </mrow>
+          <mi>f</mi>
+        </mfrac>
+      </mrow>
+    </math>
+    <p>However, c is the known value of specific heat capacity for water, so it does not need to be considered.</p>
+    <h5>Example propagation for salt mass of 0.0005kg:</h5>
+    <p>Find fractional uncertainty: </p>
+    <math>
+      <mrow>
+        <mfrac>
+          <mn>0.0001</mn>
+          <mn>0.15</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mn>0.25</mn>
+          <mrow>
+            <mn>28.58</mn>
+            <mo>−</mo>
+            <mn>18.9</mn>
+          </mrow>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mn>0.000002</mn>
+          <mn>0.0255</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mn>0.25</mn>
+          <mrow>
+            <mn>90</mn>
+            <mo>−</mo>
+            <mn>28.58</mn>
+          </mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mn>0.03063321</mn>
+      </mrow>
+    </math>
+    <p>Convert to absolute and round to a single significant figure: </p>
+    <math>
+      <mrow>
+        <mn>0.03063321</mn>
+        <mo>⋅</mo>
+        <mn>4196.310053</mn>
+        <mo>=</mo>
+        <mn>128.55</mn>
+        <mo stretchy="false">⇒</mo>
+        <mn>100</mn>
+        <math>
+          <mrow>
+            <msub>
+              <mi>c</mi>
+              <mi>w</mi>
+            </msub>
+            <mo>=</mo>
+            <mn>4186</mn>
+            <mrow>
+              <mi>J</mi>
+              <mo>⋅</mo>
+              <mi>k</mi>
+              <msup>
+                <mi>g</mi>
+                <mrow>
+                  <mo>−</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+              <mo>⋅</mo>
+              <msup>
+                <mi>K</mi>
+                <mrow>
+                  <mo>−</mo>
+                  <mn>1</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mrow>
+        </math>
+      </mrow>
+    </math>
+    <h3>Graph</h3>
+    <svg xmlns="http://www.w3.org/2000/svg" width="670.667" height="381.333">
+      <defs>
+        <clipPath id="a" clipPathUnits="userSpaceOnUse">
+          <path d="M0 0h503v286H0Z" />
+        </clipPath>
+        <clipPath id="b" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="c" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="d" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="e" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="f" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h401v185H77Z" />
+        </clipPath>
+        <clipPath id="g" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h401v185H77Z" />
+        </clipPath>
+        <clipPath id="h" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h401v185H77Z" />
+        </clipPath>
+        <clipPath id="i" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h401v185H77Z" />
+        </clipPath>
+        <clipPath id="j" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h401v185H77Z" />
+        </clipPath>
+        <clipPath id="k" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h401v185H77Z" />
+        </clipPath>
+        <clipPath id="l" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h401v185H77Z" />
+        </clipPath>
+        <clipPath id="m" clipPathUnits="userSpaceOnUse">
+          <path d="M77 64h400v186H77Z" />
+        </clipPath>
+        <clipPath id="n" clipPathUnits="userSpaceOnUse">
+          <path d="M77 64h400v186H77Z" />
+        </clipPath>
+        <clipPath id="o" clipPathUnits="userSpaceOnUse">
+          <path d="M77 64h400v186H77Z" />
+        </clipPath>
+        <clipPath id="p" clipPathUnits="userSpaceOnUse">
+          <path d="M77 64h400v186H77Z" />
+        </clipPath>
+        <clipPath id="q" clipPathUnits="userSpaceOnUse">
+          <path d="M77 64h400v186H77Z" />
+        </clipPath>
+        <clipPath id="r" clipPathUnits="userSpaceOnUse">
+          <path d="M77 64h400v186H77Z" />
+        </clipPath>
+        <clipPath id="s" clipPathUnits="userSpaceOnUse">
+          <path d="M77 64h400v186H77Z" />
+        </clipPath>
+        <clipPath id="t" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="u" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h400v185H77Z" />
+        </clipPath>
+        <clipPath id="v" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h400v185H77Z" />
+        </clipPath>
+        <clipPath id="w" clipPathUnits="userSpaceOnUse">
+          <path d="M77 65h400v185H77Z" />
+        </clipPath>
+        <clipPath id="x" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="y" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="z" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="A" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="B" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="C" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="D" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="E" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="F" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="G" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="H" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="I" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="J" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="K" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="L" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="M" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="N" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="O" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="P" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="Q" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="R" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="S" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="T" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="U" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="V" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="W" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="X" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="Y" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="Z" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="aa" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="ab" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="ac" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="ad" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="ae" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+        <clipPath id="af" clipPathUnits="userSpaceOnUse">
+          <path d="M0 1h502v285H0Z" />
+        </clipPath>
+      </defs>
+      <g clip-path="url(#a)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M0 286h503V0H0Z" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+      <path d="M1 285h501V0H1Z" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+        transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)" />
+      <g clip-path="url(#b)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path
+          d="M0 2057400h5080000M0 1765300h5080000M0 1473200h5080000M0 1181100h5080000M0 889000h5080000M0 596900h5080000M0 292100h5080000M0 0h5080000"
+          style="fill:none;stroke:#d9d9d9;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,77.5,249.5)" />
+      </g>
+      <g clip-path="url(#c)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path
+          d="M723900 0v2349500M1460500 0v2349500M2184400 0v2349500M2908300 0v2349500M3632200 0v2349500M4356100 0v2349500M5080000 0v2349500"
+          style="fill:none;stroke:#d9d9d9;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,77.5,249.5)" />
+      </g>
+      <g clip-path="url(#d)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="m0 0 1 2349500"
+          style="fill:none;stroke:#bfbfbf;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,7.874016e-5,77.5,64.5)" />
+      </g>
+      <g clip-path="url(#e)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="m0 0 5080000 1"
+          style="fill:none;stroke:#bfbfbf;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,77.5,64.5)" />
+      </g>
+      <g clip-path="url(#f)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M25400 203200v215900m0-215900V0M0 419100h63500M0 0h63500"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,75.5,112.5)" />
+      </g>
+      <g clip-path="url(#g)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M25400 215900v215900m0-215900V0M0 431800h63500M0 0h63500"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,132.5,123.5)" />
+      </g>
+      <g clip-path="url(#h)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M38100 215900v215900m0-215900V0M0 431800h63500M0 0h63500"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,189.5,138.5)" />
+      </g>
+      <g clip-path="url(#i)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M38100 203200v228600m0-228600V0M0 431800h63500M0 0h63500"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,246.5,143.5)" />
+      </g>
+      <g clip-path="url(#j)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M25400 228600v241300m0-241300V0M0 469900h50800M0 0h50800"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,304.5,170.5)" />
+      </g>
+      <g clip-path="url(#k)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M25400 228600v241300m0-241300V0M0 469900h50800M0 0h50800"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,361.5,175.5)" />
+      </g>
+      <g clip-path="url(#l)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M25400 254000v266700m0-266700V0M0 520700h50800M0 0h50800"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,418.5,225.5)" />
+      </g>
+      <g clip-path="url(#m)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M0 25400h12700M0 0v50800M12700 0v50800"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,77.5,98.5)" />
+      </g>
+      <g clip-path="url(#n)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M0 25400h12700M0 0v50800M12700 0v50800"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,134.5,108.5)" />
+      </g>
+      <g clip-path="url(#o)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M12700 38100H0M0 0v63500M12700 0v63500"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,191.5,124.5)" />
+      </g>
+      <g clip-path="url(#p)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M0 25400h12700M0 0v63500M12700 0v63500"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,249.5,129.5)" />
+      </g>
+      <g clip-path="url(#q)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M0 25400h12700M0 0v50800M12700 0v50800"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,306.5,154.5)" />
+      </g>
+      <g clip-path="url(#r)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M0 38100h12700M0 0v63500M12700 0v63500"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,363.5,160.5)" />
+      </g>
+      <g clip-path="url(#s)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M0 25400h12700M0 0v50800M12700 0v50800"
+          style="fill:none;stroke:#595959;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,420.5,207.5)" />
+      </g>
+      <g clip-path="url(#t)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path d="M78.103 97.69a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <path
+          d="M57150 31750c0 14028.03-11371.97 25400-25400 25400S6350 45778.03 6350 31750 17721.97 6350 31750 6350s25400 11371.97 25400 25400z"
+          style="fill:none;stroke:#4285f4;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,73.60299,100.1898)" />
+        <path d="M135.103 107.69a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <path
+          d="M57150 31750c0 14028.03-11371.97 25400-25400 25400S6350 45778.03 6350 31750 17721.97 6350 31750 6350s25400 11371.97 25400 25400z"
+          style="fill:none;stroke:#4285f4;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,130.603,110.1898)" />
+        <path d="M193.103 122.69a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <path
+          d="M57150 31750c0 14028.03-11371.97 25400-25400 25400S6350 45778.03 6350 31750 17721.97 6350 31750 6350s25400 11371.97 25400 25400z"
+          style="fill:none;stroke:#4285f4;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,188.603,125.1898)" />
+        <path d="M250.103 128.69a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <path
+          d="M57150 31750c0 14028.03-11371.97 25400-25400 25400S6350 45778.03 6350 31750 17721.97 6350 31750 6350s25400 11371.97 25400 25400z"
+          style="fill:none;stroke:#4285f4;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,245.603,131.1898)" />
+        <path d="M307.103 153.69a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <path
+          d="M57150 31750c0 14028.03-11371.97 25400-25400 25400S6350 45778.03 6350 31750 17721.97 6350 31750 6350s25400 11371.97 25400 25400z"
+          style="fill:none;stroke:#4285f4;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,302.603,156.1898)" />
+        <path d="M364.103 158.69a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <path
+          d="M57150 31750c0 14028.03-11371.97 25400-25400 25400S6350 45778.03 6350 31750 17721.97 6350 31750 6350s25400 11371.97 25400 25400z"
+          style="fill:none;stroke:#4285f4;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,359.603,161.1898)" />
+        <path d="M421.103 206.69a2 2 0 1 0-4 0 2 2 0 0 0 4 0z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <path
+          d="M57150 31750c0 14028.03-11371.97 25400-25400 25400S6350 45778.03 6350 31750 17721.97 6350 31750 6350s25400 11371.97 25400 25400z"
+          style="fill:none;stroke:#4285f4;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+          transform="matrix(7.874016e-5,0,0,-7.874016e-5,416.603,209.1898)" />
+      </g>
+      <g clip-path="url(#u)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path
+          d="M78.207 88.279h.001a.75.75 0 1 1-.413 1.442h-.002a.75.75 0 1 1 .414-1.442zm2.885.827h.001a.75.75 0 0 1-.413 1.442h-.001a.75.75 0 1 1 .413-1.442zm2.885.827h.002a.75.75 0 0 1-.413 1.442h-.002a.75.75 0 1 1 .413-1.442zm2.886.826h.001a.75.75 0 1 1-.413 1.443h-.001a.75.75 0 0 1 .413-1.443zm2.885.827h.001a.75.75 0 0 1-.413 1.443h-.001a.75.75 0 1 1 .413-1.443zm2.885.827h.002a.75.75 0 1 1-.413 1.442h-.002a.75.75 0 0 1 .413-1.442zm2.886.827h.001a.75.75 0 1 1-.413 1.442h-.001a.75.75 0 0 1 .413-1.442zm2.885.827h.002a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 1 1 .413-1.442zm2.886.826a.75.75 0 1 1-.413 1.443.75.75 0 1 1 .413-1.443zm2.885.827h.001a.75.75 0 1 1-.413 1.443h-.001a.75.75 0 1 1 .413-1.443zm2.885.827h.001a.75.75 0 0 1-.413 1.442.75.75 0 1 1 .412-1.442zm2.886.827a.75.75 0 0 1-.413 1.442.75.75 0 1 1 .413-1.442zm2.885.827h.002a.75.75 0 0 1-.413 1.442h-.002a.75.75 0 0 1 .413-1.442zm2.886.826a.75.75 0 0 1-.413 1.443.75.75 0 1 1 .413-1.443zm2.885.827h.001a.75.75 0 0 1-.413 1.443h-.001a.75.75 0 1 1 .413-1.443zm2.885.827h.001a.75.75 0 0 1-.413 1.442h-.001a.75.75 0 1 1 .413-1.442zm2.886.827h.002a.75.75 0 0 1-.414 1.442h-.002a.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 0 1-.413 1.442h-.001a.75.75 0 1 1 .413-1.442zm2.886.827a.75.75 0 0 1-.413 1.442.75.75 0 1 1 .413-1.442zm2.885.826h.002a.75.75 0 0 1-.414 1.443.75.75 0 1 1 .413-1.443zm2.885.827h.001a.75.75 0 0 1-.413 1.442h-.001a.75.75 0 1 1 .413-1.442zm2.886.827a.75.75 0 0 1-.413 1.442.75.75 0 1 1 .413-1.442zm2.885.827h.001a.75.75 0 0 1-.413 1.442h-.001a.75.75 0 1 1 .413-1.442zm2.885.827h.001a.75.75 0 0 1-.413 1.442h-.001a.75.75 0 1 1 .413-1.442zm2.886.826a.75.75 0 0 1-.413 1.443.75.75 0 1 1 .413-1.443zm2.885.827h.001a.75.75 0 0 1-.413 1.443l-.001-.001a.75.75 0 1 1 .413-1.442zm2.886.827a.75.75 0 1 1-.413 1.442.75.75 0 0 1 .413-1.442zm2.885.827h.002a.75.75 0 1 1-.414 1.442h-.002a.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 1 1-.413 1.442h-.001a.75.75 0 0 1 .413-1.442zm2.885.826a.75.75 0 1 1-.411 1.443h-.002a.75.75 0 0 1 .412-1.443zm2.885.827h.001a.75.75 0 0 1-.412 1.443.75.75 0 0 1 .411-1.443zm2.886.827a.75.75 0 0 1-.411 1.443h-.001a.75.75 0 0 1 .412-1.443zm2.885.827h.001a.75.75 0 1 1-.412 1.442h-.001a.75.75 0 1 1 .412-1.442zm2.886.826a.75.75 0 1 1-.412 1.443.75.75 0 1 1 .412-1.443zm2.885.827h.002a.75.75 0 1 1-.412 1.443h-.001a.75.75 0 0 1 .412-1.443zm2.885.827h.001a.75.75 0 1 1-.412 1.443.75.75 0 0 1 .411-1.443zm2.886.827a.75.75 0 0 1-.411 1.443h-.002a.75.75 0 0 1 .412-1.443zm2.885.827h.001a.75.75 0 0 1-.412 1.442h-.001a.75.75 0 1 1 .412-1.442zm2.885.826h.001a.75.75 0 1 1-.412 1.443.75.75 0 1 1 .411-1.443zm2.886.827a.75.75 0 1 1-.411 1.443h-.001a.75.75 0 1 1 .412-1.443zm2.885.827h.001a.75.75 0 1 1-.412 1.443h-.001a.75.75 0 0 1 .412-1.443zm2.886.827h.002a.75.75 0 0 1-.413 1.443.75.75 0 0 1 .412-1.443zm2.885.827a.75.75 0 0 1-.411 1.442h-.001a.75.75 0 1 1 .412-1.442zm2.885.826h.001a.75.75 0 1 1-.412 1.443.75.75 0 1 1 .411-1.443zm2.886.827a.75.75 0 1 1-.411 1.443h-.001a.75.75 0 0 1 .412-1.443zm2.885.827h.001a.75.75 0 0 1-.412 1.443h-.002a.75.75 0 1 1 .412-1.443zm2.885.827h.001a.75.75 0 1 1-.412 1.443.75.75 0 1 1 .411-1.443zm2.886.827a.75.75 0 0 1-.411 1.442h-.001a.75.75 0 1 1 .412-1.442zm2.885.826h.001a.75.75 0 0 1-.412 1.443h-.001a.75.75 0 0 1 .412-1.443zm2.886.827h.002a.75.75 0 0 1-.413 1.443.75.75 0 1 1 .412-1.443zm2.885.827a.75.75 0 1 1-.411 1.443h-.001a.75.75 0 1 1 .412-1.443zm2.885.827h.001a.75.75 0 1 1-.412 1.443.75.75 0 1 1 .411-1.443zm2.886.827a.75.75 0 1 1-.411 1.442h-.002a.75.75 0 0 1 .412-1.442zm2.885.826h.001a.75.75 0 0 1-.412 1.443h-.002a.75.75 0 1 1 .412-1.443zm2.885.827h.001a.75.75 0 1 1-.412 1.443.75.75 0 1 1 .411-1.443zm2.886.827a.75.75 0 1 1-.411 1.443h-.001a.75.75 0 1 1 .412-1.443zm2.885.827h.001a.75.75 0 1 1-.412 1.443h-.001a.75.75 0 0 1 .412-1.443zm2.886.827a.75.75 0 0 1-.411 1.442h-.001a.75.75 0 1 1 .412-1.442zm2.886.827h.001a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.886.827a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.885.826a.75.75 0 0 1-.414 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.886.827a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .415-1.442zm2.885.827h.002a.75.75 0 0 1-.415 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.002a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.886.826a.75.75 0 0 1-.414 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.886.827h.002a.75.75 0 0 1-.415 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.885.827h.002a.75.75 0 0 1-.415 1.442h-.002a.75.75 0 0 1 .415-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.886.826a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .415-1.442zm2.885.827h.001a.75.75 0 0 1-.415 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.002a.75.75 0 0 1 .415-1.442zm2.886.827a.75.75 0 1 1-.414 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .414-1.442zm2.886.826h.002a.75.75 0 0 1-.415 1.442h-.001a.75.75 0 0 1 .415-1.442zm2.885.827a.75.75 0 1 1-.414 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .414-1.442zm2.886.827a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .415-1.442zm2.885.827h.002a.75.75 0 0 1-.415 1.442h-.002a.75.75 0 0 1 .415-1.442zm2.885.826h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .415-1.442zm2.886.827a.75.75 0 1 1-.414 1.442.75.75 0 1 1 .414-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .414-1.442zm2.886.827h.002a.75.75 0 0 1-.415 1.442h-.002a.75.75 0 0 1 .415-1.442zm2.885.827a.75.75 0 1 1-.414 1.442h-.002a.75.75 0 1 1 .415-1.442zm2.885.826h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .414-1.442zm2.886.827a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .415-1.442zm2.885.827h.001a.75.75 0 1 1-.415 1.442h-.002a.75.75 0 1 1 .415-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .414-1.442zm2.886.827h.002a.75.75 0 0 1-.415 1.442h-.001a.75.75 0 0 1 .415-1.442zm2.885.826h.001a.75.75 0 1 1-.415 1.442.75.75 0 1 1 .414-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .414-1.442zm2.886.827a.75.75 0 0 1-.414 1.442h-.002a.75.75 0 0 1 .415-1.442zm2.885.827h.001a.75.75 0 1 1-.415 1.442.75.75 0 1 1 .414-1.442zm2.886.827a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .415-1.442zm2.885.826a.75.75 0 0 1-.414 1.442.75.75 0 1 1 .414-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .414-1.442zm2.886.827a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 1 1 .415-1.442zm2.885.827h.002a.75.75 0 0 1-.415 1.442.75.75 0 1 1 .414-1.442zm2.885.827h.002a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.886.826a.75.75 0 1 1-.414 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 0 1-.415 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.002a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.886.827a.75.75 0 1 1-.414 1.442.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 1 1 .414-1.442zm2.886.826a.75.75 0 0 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.885.827h.001a.75.75 0 0 1-.415 1.442h-.002a.75.75 0 0 1 .415-1.442zm2.885.827h.001a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 0 1 .414-1.442zm2.886.827h.002a.75.75 0 0 1-.415 1.442h-.001a.75.75 0 0 1 .415-1.442zm2.885.827h.002a.75.75 0 0 1-.415 1.442.75.75 0 0 1 .414-1.442zm2.885.826.001.001a.75.75 0 1 1-.414 1.441h-.001a.75.75 0 0 1 .414-1.442zm2.886.827a.75.75 0 1 1-.414 1.442.75.75 0 1 1 .414-1.442zm2.885.827h.002a.75.75 0 0 1-.415 1.442.75.75 0 0 1 .414-1.442zm2.886.827a.75.75 0 1 1-.414 1.442h-.001a.75.75 0 1 1 .415-1.442zm2.885.827h.001a.75.75 0 1 1-.415 1.442.75.75 0 1 1 .414-1.442zm2.883.826a.75.75 0 1 1-.409 1.443h-.002a.75.75 0 1 1 .41-1.443zm2.885.827h.001a.75.75 0 1 1-.41 1.443.75.75 0 1 1 .41-1.443zm2.885.826h.002a.75.75 0 1 1-.41 1.444.75.75 0 1 1 .41-1.444zm2.886.827a.75.75 0 1 1-.409 1.444h-.002a.75.75 0 0 1 .41-1.444z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+      <g clip-path="url(#v)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path
+          d="M78.294 80.31h.002a.75.75 0 0 1-.59 1.38.75.75 0 0 1 .588-1.38zm2.761 1.179h.001a.75.75 0 1 1-.589 1.38h-.001a.75.75 0 0 1 .589-1.38zm2.76 1.178h.002a.75.75 0 0 1-.589 1.38h-.001a.75.75 0 0 1 .588-1.38zm2.76 1.179h.002a.75.75 0 0 1-.589 1.38h-.001a.75.75 0 1 1 .589-1.38zm2.761 1.178h.002a.75.75 0 0 1-.59 1.38.75.75 0 0 1 .588-1.38zm2.76 1.178.002.001a.75.75 0 1 1-.589 1.38l-.001-.001a.75.75 0 1 1 .589-1.38zm2.761 1.179h.002a.75.75 0 1 1-.59 1.38.75.75 0 1 1 .588-1.38zm2.76 1.178.002.001a.75.75 0 1 1-.589 1.38l-.001-.001a.75.75 0 1 1 .589-1.38zm2.761 1.179h.001a.75.75 0 1 1-.588 1.38h-.002a.75.75 0 1 1 .589-1.38zm2.76 1.178h.002a.75.75 0 0 1-.59 1.38.75.75 0 1 1 .589-1.38zm2.761 1.179h.001a.75.75 0 0 1-.589 1.38.75.75 0 0 1 .588-1.38zm2.76 1.178h.002a.75.75 0 1 1-.59 1.38.75.75 0 0 1 .589-1.38zm2.761 1.179h.001a.75.75 0 1 1-.589 1.38.75.75 0 0 1 .588-1.38zm2.76 1.178h.002a.75.75 0 0 1-.59 1.38.75.75 0 1 1 .589-1.38zm2.761 1.179h.001a.75.75 0 0 1-.589 1.38.75.75 0 1 1 .588-1.38zm2.761 1.178h.001a.75.75 0 1 1-.59 1.38.75.75 0 0 1 .59-1.38zm2.76 1.179h.002a.75.75 0 0 1-.59 1.38l-.001-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 1 1-.59 1.38.75.75 0 1 1 .589-1.38zm2.76 1.178h.001a.75.75 0 1 1-.589 1.38.75.75 0 1 1 .588-1.38zm2.76 1.179h.001a.75.75 0 1 1-.588 1.38h-.001a.75.75 0 0 1 .588-1.38zm2.761 1.178h.001a.75.75 0 1 1-.589 1.38.75.75 0 1 1 .588-1.38zm2.76 1.179h.001a.75.75 0 0 1-.588 1.38h-.001a.75.75 0 1 1 .589-1.38zm2.761 1.178h.001a.75.75 0 1 1-.589 1.38.75.75 0 1 1 .588-1.38zm2.76 1.179h.001a.75.75 0 1 1-.588 1.38h-.001a.75.75 0 0 1 .588-1.38zm2.76 1.178h.002a.75.75 0 1 1-.589 1.38.75.75 0 1 1 .588-1.38zm2.761 1.178.001.001a.75.75 0 0 1-.588 1.38h-.001a.75.75 0 1 1 .588-1.38zm2.76 1.179h.002a.75.75 0 1 1-.589 1.38.75.75 0 1 1 .588-1.38zm2.761 1.178h.001a.75.75 0 0 1-.588 1.38h-.001a.75.75 0 0 1 .588-1.38zm2.76 1.179h.002a.75.75 0 1 1-.589 1.38h-.001a.75.75 0 0 1 .589-1.38zm2.761 1.178h.001a.75.75 0 0 1-.588 1.38h-.001a.75.75 0 1 1 .588-1.38zm2.76 1.179h.002a.75.75 0 0 1-.589 1.38h-.001a.75.75 0 1 1 .589-1.38zm2.761 1.178h.001a.75.75 0 0 1-.588 1.38h-.001a.75.75 0 1 1 .588-1.38zm2.76 1.179h.002a.75.75 0 1 1-.59 1.38.75.75 0 0 1 .589-1.38zm2.761 1.178h.001a.75.75 0 0 1-.589 1.38.75.75 0 0 1 .588-1.38zm2.76 1.178.002.001a.75.75 0 1 1-.59 1.38.75.75 0 1 1 .589-1.38zm2.761 1.179h.001a.75.75 0 0 1-.589 1.38.75.75 0 1 1 .588-1.38zm2.762 1.179a.75.75 0 0 1-.59 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.76 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 1 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.38l-.001-.002a.75.75 0 0 1 .59-1.378zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 1 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 1 1 .591-1.379zm2.76 1.178.002.001a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.179h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 1 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.179h.001a.75.75 0 0 1-.59 1.38l-.002-.002a.75.75 0 0 1 .591-1.378zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 1 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.76 1.178.002.001a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.179h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 1 1 .59-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 0 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 1 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.761 1.178.001.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 0 1 .591-1.38zm2.76 1.179h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38h-.002a.75.75 0 0 1 .59-1.38zm2.76 1.179h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.001a.75.75 0 1 1-.59 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.76 1.178h.002a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 1 1 .591-1.38zm2.76 1.178h.002a.75.75 0 1 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.761 1.178.001.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 1 1 .591-1.38zm2.76 1.179h.002a.75.75 0 1 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38h-.002a.75.75 0 0 1 .591-1.38zm2.76 1.179h.002a.75.75 0 1 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.002a.75.75 0 1 1-.591 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.38zm2.76 1.178.001.001a.75.75 0 0 1-.59 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.179h.001a.75.75 0 1 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.38zm2.76 1.178h.001a.75.75 0 1 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 1 1-.59 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 1 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 1 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.178.002.001a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.179h.001a.75.75 0 1 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 1 1 .59-1.379zm2.761 1.179h.001a.75.75 0 1 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 1 1 .59-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 0 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 0 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.761 1.179h.001a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 1 1 .591-1.38zm2.76 1.178h.001a.75.75 0 0 1-.59 1.38l-.001-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38h-.002a.75.75 0 0 1 .59-1.38zm2.76 1.179h.001a.75.75 0 0 1-.59 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.001a.75.75 0 0 1-.59 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.001a.75.75 0 1 1-.59 1.379h-.001a.75.75 0 0 1 .59-1.38zm2.76 1.178h.002a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 1 1 .59-1.379zm2.761 1.179h.001a.75.75 0 1 1-.59 1.379h-.002a.75.75 0 0 1 .591-1.38zm2.76 1.178h.002a.75.75 0 0 1-.591 1.38l-.001-.001a.75.75 0 0 1 .59-1.38zm2.761 1.178.001.001a.75.75 0 1 1-.59 1.379h-.002a.75.75 0 0 1 .591-1.38zm2.76 1.179h.002a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 1 1 .591-1.38zm2.761 1.178h.001a.75.75 0 1 1-.59 1.38l-.001-.001a.75.75 0 0 1 .59-1.379zm2.76 1.179h.002a.75.75 0 0 1-.59 1.379h-.002a.75.75 0 1 1 .591-1.38zm2.761 1.178h.001a.75.75 0 1 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 0 1-.59 1.38l-.002-.001a.75.75 0 0 1 .591-1.379zm2.76 1.179h.002a.75.75 0 0 1-.591 1.379h-.001a.75.75 0 1 1 .59-1.38zm2.761 1.178h.001a.75.75 0 1 1-.59 1.38l-.002-.001a.75.75 0 1 1 .591-1.379z"
+          style="fill:#fbbc04;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+      <g clip-path="url(#w)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path
+          d="M78.152 113.266h.002a.75.75 0 1 1-.305 1.469h-.001a.75.75 0 1 1 .304-1.47zm2.94.61a.75.75 0 1 1-.304 1.469h-.002a.75.75 0 0 1 .305-1.47zm2.938.61h.002a.75.75 0 1 1-.305 1.469h-.002a.75.75 0 0 1 .305-1.47zm2.939.61h.002a.75.75 0 1 1-.306 1.469h-.001a.75.75 0 0 1 .305-1.469zm2.939.61h.001a.75.75 0 1 1-.305 1.47l-.001-.001a.75.75 0 1 1 .305-1.469zm2.939.61h.001a.75.75 0 0 1-.305 1.47l-.001-.001a.75.75 0 1 1 .305-1.469zm2.938.61h.002a.75.75 0 0 1-.305 1.47l-.001-.001a.75.75 0 1 1 .304-1.469zm2.94.61a.75.75 0 0 1-.304 1.47h-.002a.75.75 0 1 1 .305-1.47zm2.938.61h.001a.75.75 0 0 1-.305 1.47h-.002a.75.75 0 0 1 .305-1.47zm2.94.61v.001a.75.75 0 1 1-.305 1.469h-.002a.75.75 0 0 1 .305-1.47zm2.938.61.002.001a.75.75 0 0 1-.305 1.469h-.001a.75.75 0 1 1 .305-1.47zm2.939.61.002.001a.75.75 0 1 1-.305 1.469h-.001a.75.75 0 1 1 .305-1.47zm2.939.611a.75.75 0 1 1-.304 1.469h-.001a.75.75 0 0 1 .305-1.469zm2.938.61h.002a.75.75 0 0 1-.305 1.47v-.001a.75.75 0 1 1 .304-1.469zm2.94.61a.75.75 0 1 1-.305 1.47v-.001a.75.75 0 0 1 .304-1.469zm2.938.61h.002a.75.75 0 1 1-.305 1.47l-.001-.001a.75.75 0 0 1 .305-1.469zm2.94.61a.75.75 0 1 1-.305 1.47l-.001-.001a.75.75 0 1 1 .305-1.468zm2.938.61h.001a.75.75 0 1 1-.306 1.47.75.75 0 1 1 .305-1.47zm2.939.61.002.001a.75.75 0 0 1-.306 1.469h-.002a.75.75 0 1 1 .306-1.47zm2.939.61v.001a.75.75 0 1 1-.305 1.469.75.75 0 0 1 .305-1.47zm2.938.61.002.001a.75.75 0 0 1-.305 1.469h-.001a.75.75 0 1 1 .305-1.47zm2.94.611a.75.75 0 0 1-.305 1.469h-.001a.75.75 0 0 1 .305-1.469zm2.938.61h.001a.75.75 0 0 1-.305 1.469h-.001a.75.75 0 0 1 .305-1.469zm2.939.61h.001a.75.75 0 0 1-.306 1.47v-.001a.75.75 0 1 1 .305-1.469zm2.939.61a.75.75 0 1 1-.305 1.47v-.001a.75.75 0 0 1 .305-1.469zm2.939.61a.75.75 0 1 1-.305 1.47l-.002-.001a.75.75 0 0 1 .306-1.468zm2.938.61h.001a.75.75 0 1 1-.305 1.47h-.001a.75.75 0 1 1 .305-1.47zm2.94.61.001.001a.75.75 0 0 1-.305 1.469h-.002a.75.75 0 1 1 .305-1.47zm2.938.61.001.001a.75.75 0 1 1-.305 1.469h-.001a.75.75 0 1 1 .305-1.47zm2.939.61.002.001a.75.75 0 0 1-.306 1.469.75.75 0 0 1 .305-1.47zm2.939.611a.75.75 0 0 1-.305 1.469.75.75 0 0 1 .305-1.469zm2.939.61a.75.75 0 0 1-.305 1.469.75.75 0 0 1 .305-1.469zm2.938.61h.001a.75.75 0 0 1-.305 1.47l-.002-.001a.75.75 0 0 1 .305-1.469zm2.94.61a.75.75 0 0 1-.305 1.47l-.001-.001a.75.75 0 0 1 .305-1.469zm2.938.61h.001a.75.75 0 1 1-.305 1.47l-.001-.001a.75.75 0 1 1 .305-1.469zm2.939.61h.001a.75.75 0 1 1-.306 1.47.75.75 0 0 1 .305-1.47zm2.939.61v.001a.75.75 0 1 1-.305 1.468h-.002a.75.75 0 0 1 .306-1.468zm2.939.61v.001a.75.75 0 0 1-.305 1.469.75.75 0 1 1 .305-1.47zm2.939.61v.001a.75.75 0 1 1-.305 1.469.75.75 0 1 1 .305-1.47zm2.938.611h.001a.75.75 0 0 1-.305 1.469h-.001a.75.75 0 1 1 .305-1.469zm2.94.61a.75.75 0 0 1-.305 1.469h-.001a.75.75 0 0 1 .305-1.469zm2.938.61h.001a.75.75 0 1 1-.305 1.47l-.002-.001a.75.75 0 0 1 .305-1.469zm2.939.61a.75.75 0 0 1-.305 1.47v-.001a.75.75 0 1 1 .305-1.469zm2.939.61h.002a.75.75 0 0 1-.306 1.47l-.002-.001a.75.75 0 0 1 .306-1.469zm2.939.61a.75.75 0 0 1-.305 1.47h-.001a.75.75 0 0 1 .305-1.47zm2.938.61h.002a.75.75 0 0 1-.305 1.47h-.001a.75.75 0 0 1 .305-1.47zm2.94.61v.001a.75.75 0 1 1-.305 1.469h-.001a.75.75 0 1 1 .305-1.47zm2.938.61.001.001a.75.75 0 1 1-.306 1.469.75.75 0 1 1 .305-1.47zm2.939.611a.75.75 0 1 1-.305 1.469h-.002a.75.75 0 0 1 .306-1.469zm2.939.61a.75.75 0 1 1-.305 1.469.75.75 0 1 1 .305-1.469zm2.939.61a.75.75 0 1 1-.305 1.469h-.001a.75.75 0 1 1 .305-1.469zm2.938.61h.001a.75.75 0 0 1-.305 1.47l-.001-.001a.75.75 0 1 1 .305-1.469zm2.94.61a.75.75 0 1 1-.305 1.47l-.002-.001a.75.75 0 0 1 .305-1.469zm2.938.61h.001a.75.75 0 0 1-.306 1.47.75.75 0 0 1 .305-1.47zm2.939.61h.002a.75.75 0 0 1-.306 1.47.75.75 0 0 1 .305-1.47zm2.939.61v.001a.75.75 0 1 1-.305 1.469.75.75 0 0 1 .305-1.47zm2.939.61v.001a.75.75 0 0 1-.305 1.469h-.001a.75.75 0 1 1 .305-1.47zm2.937.61.001.001a.75.75 0 0 1-.303 1.469h-.001a.75.75 0 1 1 .303-1.47zm2.94.61v.001a.75.75 0 1 1-.303 1.47l-.001-.001a.75.75 0 0 1 .303-1.47zm2.938.611h.001a.75.75 0 1 1-.304 1.47l-.002-.001a.75.75 0 1 1 .304-1.469zm2.939.61h.001a.75.75 0 1 1-.304 1.47v-.001a.75.75 0 1 1 .303-1.469zm2.939.61h.002a.75.75 0 0 1-.304 1.47.75.75 0 1 1 .303-1.47zm2.939.61h.002a.75.75 0 1 1-.304 1.47h-.001a.75.75 0 1 1 .303-1.47zm2.938.61h.002a.75.75 0 0 1-.303 1.47h-.002a.75.75 0 1 1 .303-1.47zm2.94.61h.001a.75.75 0 1 1-.303 1.47h-.002a.75.75 0 0 1 .303-1.47zm2.938.61h.001a.75.75 0 1 1-.303 1.47h-.002a.75.75 0 0 1 .303-1.47zm2.939.61.001.001a.75.75 0 0 1-.304 1.469h-.002a.75.75 0 0 1 .304-1.47zm2.939.61v.001a.75.75 0 0 1-.303 1.47v-.001a.75.75 0 1 1 .303-1.47zm2.939.61v.001a.75.75 0 0 1-.303 1.47l-.002-.001a.75.75 0 1 1 .304-1.47zm2.938.611h.001a.75.75 0 0 1-.303 1.47l-.001-.001a.75.75 0 0 1 .303-1.469zm2.94.61a.75.75 0 1 1-.303 1.47h-.002a.75.75 0 1 1 .303-1.47zm2.938.61h.002a.75.75 0 1 1-.303 1.47h-.001a.75.75 0 0 1 .303-1.47zm2.939.61h.002a.75.75 0 1 1-.304 1.47.75.75 0 1 1 .303-1.47zm2.939.61a.75.75 0 1 1-.303 1.47.75.75 0 1 1 .303-1.47zm2.939.61h.002a.75.75 0 0 1-.304 1.47h-.002a.75.75 0 1 1 .304-1.47zm2.939.61v.001a.75.75 0 1 1-.303 1.469h-.001a.75.75 0 1 1 .304-1.47zm2.938.61.002.001a.75.75 0 0 1-.303 1.47l-.002-.001a.75.75 0 0 1 .303-1.47zm2.94.61v.001a.75.75 0 1 1-.303 1.47l-.002-.001a.75.75 0 0 1 .303-1.47zm2.938.611h.001a.75.75 0 0 1-.303 1.47l-.002-.001a.75.75 0 0 1 .303-1.469zm2.939.61a.75.75 0 0 1-.303 1.47h-.002a.75.75 0 0 1 .304-1.47zm2.939.61h.002a.75.75 0 0 1-.304 1.47.75.75 0 1 1 .303-1.47zm2.939.61a.75.75 0 0 1-.303 1.47h-.002a.75.75 0 1 1 .304-1.47zm2.938.61h.002a.75.75 0 1 1-.303 1.47h-.001a.75.75 0 0 1 .303-1.47zm2.94.61a.75.75 0 1 1-.303 1.47h-.001a.75.75 0 1 1 .303-1.47zm2.938.61.002.001a.75.75 0 1 1-.304 1.469.75.75 0 1 1 .303-1.47zm2.939.61.002.001a.75.75 0 1 1-.304 1.469.75.75 0 1 1 .303-1.47zm2.939.61.002.001a.75.75 0 1 1-.304 1.47l-.002-.001a.75.75 0 1 1 .304-1.47zm2.939.611h.002a.75.75 0 0 1-.304 1.47l-.002-.001a.75.75 0 1 1 .304-1.469zm2.938.61h.001a.75.75 0 1 1-.303 1.47h-.001a.75.75 0 0 1 .303-1.47zm2.94.61a.75.75 0 0 1-.303 1.47h-.002a.75.75 0 0 1 .303-1.47zm2.938.61h.001a.75.75 0 0 1-.304 1.47h-.002a.75.75 0 0 1 .304-1.47zm2.939.61h.001a.75.75 0 0 1-.304 1.47h-.002a.75.75 0 0 1 .304-1.47zm2.939.61a.75.75 0 0 1-.303 1.47.75.75 0 0 1 .303-1.47zm2.939.61h.002a.75.75 0 0 1-.304 1.47h-.001a.75.75 0 1 1 .303-1.47zm2.938.61.002.001a.75.75 0 1 1-.303 1.469h-.001a.75.75 0 0 1 .303-1.47zm2.94.61.001.001a.75.75 0 1 1-.303 1.47l-.002-.001a.75.75 0 0 1 .303-1.47zm2.938.611h.001a.75.75 0 1 1-.303 1.47l-.001-.001a.75.75 0 1 1 .303-1.469zm2.939.61h.002a.75.75 0 1 1-.304 1.47l-.002-.001a.75.75 0 1 1 .304-1.469zm2.939.61a.75.75 0 1 1-.303 1.47.75.75 0 1 1 .303-1.47zm2.939.61h.002a.75.75 0 0 1-.304 1.47h-.002a.75.75 0 1 1 .304-1.47zm2.938.61h.001a.75.75 0 0 1-.303 1.47h-.002a.75.75 0 0 1 .303-1.47zm2.94.61a.75.75 0 1 1-.303 1.47h-.001a.75.75 0 0 1 .303-1.47zm2.938.61h.001a.75.75 0 0 1-.303 1.47h-.001a.75.75 0 0 1 .303-1.47zm2.939.61.001.001a.75.75 0 0 1-.304 1.469.75.75 0 1 1 .303-1.47zm2.939.61.002.001a.75.75 0 0 1-.304 1.47l-.002-.001a.75.75 0 0 1 .304-1.47zm2.939.61.002.001a.75.75 0 1 1-.304 1.47l-.002-.001a.75.75 0 1 1 .304-1.47zm2.938.611h.001a.75.75 0 1 1-.303 1.47l-.001-.001a.75.75 0 1 1 .303-1.469zm2.94.61a.75.75 0 1 1-.303 1.47h-.002a.75.75 0 1 1 .303-1.47zm2.938.61h.001a.75.75 0 0 1-.304 1.47h-.002a.75.75 0 1 1 .304-1.47zm2.939.61h.002a.75.75 0 0 1-.304 1.47.75.75 0 1 1 .303-1.47zm2.939.61h.002a.75.75 0 1 1-.304 1.47h-.002a.75.75 0 0 1 .304-1.47zm2.938.61h.001a.75.75 0 0 1-.303 1.47h-.001a.75.75 0 0 1 .303-1.47zm2.94.61.001.001a.75.75 0 0 1-.303 1.469h-.002a.75.75 0 0 1 .303-1.47zm2.94.611h.001a.75.75 0 1 1-.307 1.469h-.001a.75.75 0 0 1 .307-1.469zm2.939.61h.001a.75.75 0 1 1-.307 1.469h-.002a.75.75 0 0 1 .307-1.469zm2.939.61h.002a.75.75 0 0 1-.308 1.469h-.002a.75.75 0 0 1 .308-1.469zm2.939.61a.75.75 0 0 1-.307 1.469.75.75 0 0 1 .307-1.468z"
+          style="fill:#ea4335;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+      <g clip-path="url(#x)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(401.8296,-116) matrix(1,0,0,-1,0,286)">
+          <tspan
+            x="0 5.0004001 7.0037999 12.0042 15.0066 20.007 23.009399 28.0098 33.010201 38.010601 43.011002 48.011398 50.014801 55.015202 57.0186 62.019001 65.0214 70.021797 75.022202 80.022598"
+            y="0">y = 0.0142x + 0.0002</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#y)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#fbbc04;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(413.3886,-65) matrix(1,0,0,-1,0,286)">
+          <tspan
+            x="0 5.0004001 7.0037999 12.0042 15.0066 20.007 23.009399 28.0098 33.010201 38.010601 43.011002 48.011398 50.014801 55.015202 57.0186 62.019001 65.0214 70.021797 75.022202 80.022598"
+            y="0">y = 0.0211x + 0.0002</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#z)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ea4335;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(405.8134,-100) matrix(1,0,0,-1,0,286)">
+          <tspan
+            x="0 5.0004001 7.0037999 12.0042 15.0066 20.007 23.009399 28.0098 33.010201 38.010601 43.011002 48.011398 50.014801 55.015202 57.0186 62.019001 65.0214 70.021797 75.022202 80.022598"
+            y="0">y = 0.0104x + 0.0002</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#A)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-224) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0002200</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#B)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-201) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0002300</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#C)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-178) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0002400</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#D)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-155) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0002500</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#E)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-132) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0002600</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#F)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-109) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0002700</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#G)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-86) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0002800</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#H)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-62) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0002900</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#I)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(27.60299,-39) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004 28.0044 33.004799 38.005199" y="0">0.0003000</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#J)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(75.38079,-235) matrix(1,0,0,-1,0,286)">
+          <tspan x="0" y="0">0</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#K)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(121.2202,-235) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004" y="0">0.0005</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#L)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(180.8221,-235) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599" y="0">0.001</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#M)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(235.4191,-235) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004" y="0">0.0015</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#N)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(295.021,-235) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599" y="0">0.002</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#O)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(349.618,-235) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004" y="0">0.0025</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#P)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(409.2199,-235) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599" y="0">0.003</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#Q)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(463.8169,-235) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 5.0004001 8.0028 13.0032 18.003599 23.004" y="0">0.0035</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#R)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="rotate(90,114.0515,194.0515) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 6 9 14 20 26 31 33 36 38 43 45 51 57 63 66 68 73 79 85 91 96 98 101 106 108 111 116 118 123"
+            y="0">1/specific heat capacity (J kg</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#S)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:7px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="rotate(90,48.0515,257.0515) matrix(1,0,0,-1,0,286)">
+          <tspan x="0" y="0">-</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#T)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:7px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="rotate(90,47.0515,258.0515) matrix(1,0,0,-1,0,286)">
+          <tspan x="0" y="0">1</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#U)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="rotate(90,45.5515,262.5515) matrix(1,0,0,-1,0,286)">
+          <tspan x="0" y="0">K</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#V)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:7px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="rotate(90,40.5515,264.5515) matrix(1,0,0,-1,0,286)">
+          <tspan x="0" y="0">-</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#W)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:7px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="rotate(90,39.5515,265.5515) matrix(1,0,0,-1,0,286)">
+          <tspan x="0" y="0">1</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#X)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="rotate(90,39.0515,269.0515) matrix(1,0,0,-1,0,286)">
+          <tspan x="0" y="0">)</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#Y)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(241.0364,-249) matrix(1,0,0,-1,0,286)">
+          <tspan x="0 8 14 19 24 27 33 36 38 43 49 51 54 56 59 64 70" y="0">Mass of salt (kg)</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#Z)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:14px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(102.7775,-21) matrix(1,0,0,-1,0,286)">
+          <tspan
+            x="0 11.9994 19.999001 26.999001 33.999001 36.999199 44.998798 48.9986 52.998402 59.998402 67.998001 70.998199 74.998001 78.997803 81.998001 89.997597 92.997803 99.997803 107.9974 110.9976 118.9972 122.997 125.9972 133.9968 141.9964 145.9962 152.9962 159.9962 162.9964 169.9964 177.996 185.99561 192.99561 195.9958 199.99561 202.9958 209.9958 213.99561 221.99519 229.9948 237.9944 241.9942 244.9944 251.9944 259.99399 267.99359 275.99319 282.99319 285.99341 289.99319"
+            y="0">Mass of salt in solution vs specific heat capacity</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#aa)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path
+          d="M123 14.75h.001a.75.75 0 0 0 0-1.5H123a.75.75 0 0 0 0 1.5zm3.002 0h.001a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.001 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.002 0a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.001 0h.001a.75.75 0 0 0 0-1.5h-.001a.75.75 0 0 0 0 1.5zm3.001 0h.001a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.002 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.001 0h.001a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.002 0h.001a.75.75 0 0 0 0-1.5h-.001a.75.75 0 0 0 0 1.5z"
+          style="fill:#4285f4;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+      <g clip-path="url(#ab)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(150.7831,-274) matrix(1,0,0,-1,0,286)">
+          <tspan
+            x="0 5.0004001 7.0037999 12.0042 17.004601 22.004999 25.007401 28.0098 31.012199 36.0126 40.014 45.0144"
+            y="0">Linear (avg)</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#ac)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path
+          d="M214 14.75h.001a.75.75 0 0 0 0-1.5H214a.75.75 0 0 0 0 1.5zm3.002 0a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.001 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.002 0a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.001 0h.001a.75.75 0 0 0 0-1.5h-.001a.75.75 0 0 0 0 1.5zm3.001 0h.001a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.002 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.001 0h.001a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.002 0h.001a.75.75 0 0 0 0-1.5h-.001a.75.75 0 0 0 0 1.5z"
+          style="fill:#fbbc04;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+      <g clip-path="url(#ad)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(242.3496,-274) matrix(1,0,0,-1,0,286)">
+          <tspan
+            x="0 5.0004001 7.0037999 12.0042 17.004601 22.004999 25.007401 28.0098 31.012199 38.010601 43.011002 48.011398"
+            y="0">Linear (max)</tspan>
+        </text>
+      </g>
+      <g clip-path="url(#ae)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <path
+          d="M308 14.75h.002a.75.75 0 0 0 0-1.5H308a.75.75 0 0 0 0 1.5zm3.002 0a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.001 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.002 0a.75.75 0 0 0 0-1.5.75.75 0 0 0 0 1.5zm3.001 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.002 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.001 0h.001a.75.75 0 0 0 0-1.5h-.001a.75.75 0 0 0 0 1.5zm3.002 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5zm3.001 0h.002a.75.75 0 0 0 0-1.5h-.002a.75.75 0 0 0 0 1.5z"
+          style="fill:#ea4335;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      </g>
+      <g clip-path="url(#af)" transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333)">
+        <text xml:space="preserve"
+          style="font-variant:normal;font-weight:400;font-size:9px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#595959;fill-opacity:1;fill-rule:nonzero;stroke:none"
+          transform="translate(336.4061,-274) matrix(1,0,0,-1,0,286)">
+          <tspan
+            x="0 5.0004001 7.0037999 12.0042 17.004601 22.004999 25.007401 28.0098 31.012199 38.010601 40.014 45.0144"
+            y="0">Linear (min)</tspan>
+        </text>
+      </g>
+      <path d="M0 0h6375400v3619500H0Z"
+        style="fill:none;stroke:#d9d9d9;stroke-width:9525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+        transform="matrix(1.3333333,0,0,-1.3333333,0,381.33333) matrix(7.874016e-5,0,0,-7.874016e-5,0.5,285.5)" />
+    </svg>
+    <p>This graph shows the mass of salt against the specific heat capacity. The graph is linearised according to the
+      hypothesis. The error bars were used to create min and max lines of best fit.</p>
+    <h2>Analysis</h2>
+    <p>
+      The hypothesis predicted that the graph of mass of salt against the inverse of the specific heat capacity will have
+      a positive, linear correlation. The gradient of the main trendline on the graph proves this prediction. This
+      trendline is valid since it passes through all the error bars. The maximum and minimum lines of best fit, while
+      maintaining the positive, linear correlation, do not pass through the error bars, invalidating them. This is
+      indicative of some random error in the data.
+    </p>
+    <ul>
+      <li>
+        Best fit gradient: <math>
+          <mrow>
+            <mn>0.0142</mn>
+            <mi>J</mi>
+            <mo>⋅</mo>
+            <mi>k</mi>
+            <msup>
+              <mi>g</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>⋅</mo>
+            <msup>
+              <mi>K</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </math>
+      </li>
+      <li>
+        Min fit gradient: <math>
+          <mrow>
+            <mn>0.0104</mn>
+            <mi>J</mi>
+            <mo>⋅</mo>
+            <mi>k</mi>
+            <msup>
+              <mi>g</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>⋅</mo>
+            <msup>
+              <mi>K</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </math>
+      </li>
+      <li>
+        Max fit gradient: <math>
+          <mrow>
+            <mn>0.0211</mn>
+            <mi>J</mi>
+            <mo>⋅</mo>
+            <mi>k</mi>
+            <msup>
+              <mi>g</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>⋅</mo>
+            <msup>
+              <mi>K</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </math>
+      </li>
+      <li>
+        Gradient: <math>
+          <mrow>
+            <mrow>
+              <mn>0.0142</mn>
+              <mo>±</mo>
+              <mn>0.00535</mn>
+            </mrow>
+            <mi>J</mi>
+            <mo>⋅</mo>
+            <mi>k</mi>
+            <msup>
+              <mi>g</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>⋅</mo>
+            <msup>
+              <mi>K</mi>
+              <mrow>
+                <mo>−</mo>
+                <mn>1</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </math>
+      </li>
+      <li>
+        Gradient percentage uncertainty: 37.6%
+      </li>
+    </ul>
+    <p>
+      The gradient has a large uncertainty. This means the precision could be greatly improved. 
+      Despite issues with precision, the data does appear to be rather accurate since the points appear consistently close to the best fit gradient. There are a possible anomalies at 0.0025 and 0.003, perhaps the sodium chloride was improperly dissolved in the water in the former point.
+    </p>
+    <h2>Conclusion</h2>
+    <p>
+      In conclusion, the mass of sodium chloride in a solution is proportional to the inverse of its specific heat capacity. 
+    </p>
+    <h2>Evaluation</h2>
+    <h2>Works cited</h2>
+    
+</body>
+</html>
